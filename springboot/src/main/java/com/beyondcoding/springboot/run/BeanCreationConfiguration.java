@@ -24,7 +24,7 @@ public class BeanCreationConfiguration {
             System.out.println(dataManagementBean.getMessage());
             System.out.println(businessLogicBean.getMessage());
             System.out.println(viewBean.getMessage());
-            System.out.println("--- ---");
+            System.out.println("--- *** ---");
         };
     }
 
@@ -35,7 +35,7 @@ public class BeanCreationConfiguration {
             System.out.println(blueBean.getMessage());
             System.out.println(greenBean.getMessage());
             numberBeans.forEach(bean -> System.out.println(bean.getMessage()));
-            System.out.println("--- ---");
+            System.out.println("--- *** ---");
         };
     }
 
@@ -46,7 +46,7 @@ public class BeanCreationConfiguration {
             superheroes.stream()
                     .map(superhero -> superhero.getClass().getSimpleName() + " superpowers are " + superhero.getSuperPowers())
                     .forEach(System.out::println);
-            System.out.println("--- ---");
+            System.out.println("--- *** ---");
         };
     }
 
