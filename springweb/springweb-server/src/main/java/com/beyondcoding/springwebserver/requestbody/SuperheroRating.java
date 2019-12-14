@@ -14,6 +14,14 @@ public class SuperheroRating {
     @Max(5)
     private int rating;
 
+    public SuperheroRating() {
+    }
+
+    public SuperheroRating(@NotBlank String name, @Min(1) @Max(5) int rating) {
+        this.name = name;
+        this.rating = rating;
+    }
+
     public String getName() {
         return name;
     }
