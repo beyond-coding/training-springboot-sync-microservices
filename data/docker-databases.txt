@@ -1,0 +1,10 @@
+-- MySQL
+
+docker run -d -p 3306:3306 -v "$PWD/data/mysql":/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root --name mysql mysql:5.7
+
+-- MongoDB
+
+docker run -d -p 27017:27017 -v "$PWD/data/mongodb":/data/db --name mongodb mongo
+
+-- Mongo Express (UI for MongoDB)
+docker run -d -p 8081:8081 --link mongodb:mongo --name mongo-express mongo-express
