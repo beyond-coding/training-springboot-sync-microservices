@@ -3,6 +3,7 @@ package com.beyondcoding.springwebserver.requestbody;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Map;
 import java.util.Set;
 
 @RestController
@@ -26,7 +27,7 @@ public class SuperheroRatingsEndpoint {
     }
 
     @PostMapping
-    SuperheroRating post(@Valid @RequestBody SuperheroRating rating) {
+    SuperheroRating post(@Valid @RequestBody SuperheroRating rating, Map<String, String> parameters) {
         return superheroRatingService.addIfNew(rating);
     }
 
