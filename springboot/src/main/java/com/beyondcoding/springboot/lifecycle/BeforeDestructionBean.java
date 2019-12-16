@@ -9,7 +9,7 @@ public class BeforeDestructionBean {
 
     // This lifecycle stage is very unstable, since depends on external factors like the JVM
     @PreDestroy
-    public void setup() {
+    public void destroy() {
         System.out.println("--- BEAN LIFECYCLE ---");
         System.out.println("Triggered right before DESTRUCTION");
         System.out.println("--- *** ---");
