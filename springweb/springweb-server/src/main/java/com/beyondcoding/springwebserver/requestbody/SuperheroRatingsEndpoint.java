@@ -1,5 +1,6 @@
 package com.beyondcoding.springwebserver.requestbody;
 
+import com.beyondcoding.springwebserver.exceptions.SuperheroRatingNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -22,8 +23,9 @@ public class SuperheroRatingsEndpoint {
     }
 
     @GetMapping("/{name}")
-    SuperheroRating getOne(@PathVariable String name) {
-        return superheroRatingService.findByName(name).orElse(null);
+    SuperheroRating getOne(@PathVariable String name) throws SuperheroRatingNotFoundException {
+        return superheroRatingService.findByName(name)
+                .orElseThrow(SuperheroRatingNotFoundException::new);
     }
 
     @PostMapping
