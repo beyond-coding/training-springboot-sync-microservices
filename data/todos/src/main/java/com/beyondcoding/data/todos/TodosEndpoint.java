@@ -1,5 +1,6 @@
 package com.beyondcoding.data.todos;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -7,13 +8,10 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/todos")
+@RequiredArgsConstructor
 public class TodosEndpoint {
 
     private final TodoRepository todoRepository;
-
-    public TodosEndpoint(TodoRepository todoRepository) {
-        this.todoRepository = todoRepository;
-    }
 
     @GetMapping
     List<Todo> all() {

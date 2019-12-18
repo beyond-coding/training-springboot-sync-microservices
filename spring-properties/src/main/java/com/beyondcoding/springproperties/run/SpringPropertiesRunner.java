@@ -6,6 +6,7 @@ import com.beyondcoding.springproperties.configurationproperties.LibraryService;
 import com.beyondcoding.springproperties.value.DaysService;
 import com.beyondcoding.springproperties.value.NumberService;
 import com.beyondcoding.springproperties.value.WordService;
+import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

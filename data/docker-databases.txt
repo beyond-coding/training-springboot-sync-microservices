@@ -1,6 +1,6 @@
 -- MySQL
 
-docker run -d -p 3306:3306 -v "$PWD/data/mysql":/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root --name mysql mysql:5.7
+docker run -d -p 3306:3306 -v "$PWD/data/mysql":/var/lib/mysql -e MYSQL_ROOT_PASSWORD=difficultpassword --name mysql mysql:5.7
 
 -- MongoDB
 

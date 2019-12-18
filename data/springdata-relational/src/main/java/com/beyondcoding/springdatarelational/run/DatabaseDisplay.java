@@ -17,18 +17,23 @@ public class DatabaseDisplay {
         return args -> {
             System.out.println("--- DISPLAY ALL ITEMS ---");
             itemRepository.findAll().forEach(System.out::println);
+
             System.out.println("--- DISPLAY ALL PURCHASES ---");
             purchaseRepository.findAll().forEach(System.out::println);
+
             System.out.println("--- DISPLAY CELLPHONE ITEM ---");
-            System.out.println(itemRepository.findByName("cellphone"));
+            System.out.println(itemRepository.findByName("Cellphone"));
+
             System.out.println("--- DISPLAY ALL ITEMS WITH ELECTRONIC TAG ---");
             itemRepository.findByTags("electronic").forEach(System.out::println);
-            ;
+
             System.out.println("--- DISPLAY ALL PURCHASES WITH EUR CURRENCY ---");
             purchaseRepository.findByCurrency(Currency.EUR).forEach(System.out::println);
+
             System.out.println("--- DISPLAY ALL PURCHASES AFTER 2019 ---");
             LocalDateTime startOf2019 = LocalDateTime.of(2019, 01, 01, 0, 0);
             purchaseRepository.findByTimestampAfter(startOf2019).forEach(System.out::println);
+
             System.out.println("--- *** ---");
         };
     }
